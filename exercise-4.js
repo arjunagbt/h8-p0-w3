@@ -57,8 +57,7 @@ function dataHandling2(arr){
             break
         }
     }
-    
-    console.log(arr[3].concat().sort(function(a, b) { return a < b })) //sort descending [21, 05, 1989] jadi [21, 1989, 05] (2>1>0); di concat() agar array awal tidak termutasi
+    console.log(arr[3].concat().sort(function(a, b) { return b-a })) //sort descending [21, 05, 1989] jadi [1998, 21, 05] (2>1>0); di concat() agar array awal tidak termutasi
 
     console.log(arr[3].join('-'))   //join [21, 05, 1989] jadi string 21-05-1989
 
