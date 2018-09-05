@@ -8,17 +8,17 @@ function angkaPalindrome(num) {
     }
     return numInvers === numToString  //return boolean
 }
-   
+   var varBool = false
    var countUp = num + 1 //agar mengecek angka palindrom berikutnya meskipun input sudah palindrom
 
-   while(true){
+   while(!varBool){
        if (isPalindrome(countUp)){
-           return countUp       //while (true) baru akan keluar dari loop ketika bertemu return (memotong proses secara paksa dengan keluar fungsi)
+             varBool = true    //while (true) baru akan keluar dari loop ketika bertemu return (memotong proses secara paksa dengan keluar fungsi)
        } else {
            countUp ++
        }
    }
-
+   return countUp 
   }
   
   // TEST CASES
