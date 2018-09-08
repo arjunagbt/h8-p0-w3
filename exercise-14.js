@@ -1,15 +1,16 @@
 function mengelompokkanAngka(arr) {
 
 
-    arrayKelompok = [[],[],[]]
-    for (let index = 0; index < arr.length; index++) {
+    arrayKelompok = [[],[],[]]  // membuat nested array penampung
+
+    for (let index = 0; index < arr.length; index++) {  //cek satu persatu data di dalam array
         
-        if (arr[index] % 3 === 0){
-            arrayKelompok[2].push(arr[index])
-        } else if ( arr[index] % 3 !== 0 && arr[index] % 2 === 0){
-            arrayKelompok[0].push(arr[index])
-        } else if (arr[index] % 3 !== 0 && arr[index] % 2 !== 0){
-            arrayKelompok[1].push(arr[index])
+        if (arr[index] % 3 === 0){          //apabila isi data ke-n kelipatan 3
+            arrayKelompok[2].push(arr[index])       //push ke array penampung indeks ke 2
+        } else if ( arr[index] % 3 !== 0 && arr[index] % 2 === 0){ //apabila isi data ke-n bukan kelipatan tiga, dan data adalah genap
+            arrayKelompok[0].push(arr[index])   // push ke array indeks ke 0
+        } else if (arr[index] % 3 !== 0 && arr[index] % 2 !== 0){ //apabila isi data ke-n bukan kelipatan tiga, dan data adalah ganjil
+            arrayKelompok[1].push(arr[index]) //push ke array indeks ke 1
         }
         
     }
